@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tudo feito</title>
+	<link rel="stylesheet" type="estilo.css" href="estilo.css">
+	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js" charset="utf-8"></script>
+	<style type="text/css">
+		
+	*{
+		margin:0px;
+		padding: 0px;
+		box-sizing: border-box;;
+	}
+	body
+	{
+		height: 100vh;
+		background-color: #0c192c;
+	}
+	.container
+	{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.bubbles
+	{
+		position: relative;
+		display: flex;
+	}
+	.bubbles > span
+	{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background-color: #4fc3dc;
+		margin: 0 4px;
+		border-radius: 50%;
+		box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+		animation: animate 15s linear infinite;
+		animation-duration: calc(120s / var(--i));
+		z-index: 2;
+		opacity: 50;
+	}
+	.bubbles > span:nth-child(even)
+	{
+		background:#ff2d75;
+		box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+	}
+	@keyframes animate 
+	{
+		0%{
+			transform: translateY(100vh) scale(0);
+		}
+		100%{
+			transform: translateY(-10vh) scale(1);
+		}
+	}
+	.textos h1
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		font-size: 90px;
+		z-index: 10;
+		user-select: none;
+
+	}
+	.desAut
+	{
+		position: absolute;
+		left:50%;
+		bottom: 10%;
+		text-align: center;
+		color: #10454F;
+		font-family: sans-serif;
+
+	}
+	.desAut a 
+	{
+		text-decoration: none;
+		color: #10454F;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="bubbles">
+			<span style="--i:11;"></span>
+			<span style="--i:12;"></span>
+			<span style="--i:24;"></span>
+			<span style="--i:10;"></span>
+			<span style="--i:14;"></span>
+			<span style="--i:23;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:16;"></span>
+			<span style="--i:19;"></span>
+			<span style="--i:20;"></span>
+			<span style="--i:22;"></span>
+			<span style="--i:25;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:15;"></span>
+			<span style="--i:13;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:15;"></span>
+			<span style="--i:26;"></span>
+			<span style="--i:17;"></span>
+			<span style="--i:13;"></span>
+			<span style="--i:28;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:15;"></span>
+			<span style="--i:26;"></span>
+			<span style="--i:17;"></span>
+			<span style="--i:13;"></span>
+			<span style="--i:28;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:26;"></span>
+			<span style="--i:17;"></span>
+			<span style="--i:13;"></span>
+			<span style="--i:28;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:21;"></span>
+			<span style="--i:15;"></span>
+			<span style="--i:26;"></span>
+			<span style="--i:17;"></span>
+			<span style="--i:13;"></span>
+			<span style="--i:28;"></span>
+			<span style="--i:18;"></span>
+			<span style="--i:21;"></span>
+		</div>
+		<div class="textos">
+			<h1 id="tw">Seja Bem-vindo!</h1>
+		</div>
+
+		<div class="desAut">
+			<h3>Feito por</h3>
+			<a href="https://github.com/Marianoestevao2023" target="_blank">Mariano Estevão</a>
+		</div>
+	</div>
+
+	<script>
+
+		  var appText = document.querySelector('#tw');
+		  var twText = document.querySelector('#tw').innerText;
+
+		  var typewriter = new Typewriter(appText, {
+		  loop: true,
+		  });
+
+		  typewriter
+		  .typeString(twText)
+		  .pauseFor(1500)
+		  .start();
+
+  		</script>
+</body>
+</html>
